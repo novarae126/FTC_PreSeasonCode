@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.pedroPathing;
 
+import static android.provider.SyncStateContract.Helpers.update;
 import static org.firstinspires.ftc.teamcode.pedroPathing.Tuning.changes;
 import static org.firstinspires.ftc.teamcode.pedroPathing.Tuning.drawCurrent;
 import static org.firstinspires.ftc.teamcode.pedroPathing.Tuning.drawCurrentAndHistory;
@@ -237,10 +238,10 @@ class ForwardTuner extends OpMode {
     public void loop() {
         follower.update();
 
-        telemetryM.debug("Distance Moved: " + follower.getPose().getX());
+        telemetryM.debug("Distance Moved: " + (follower.getPose().getX()-72));
         telemetryM.debug("The multiplier will display what your forward ticks to inches should be to scale your current distance to " + DISTANCE + " inches.");
-        telemetryM.debug("Multiplier: " + (DISTANCE / (follower.getPose().getX() / follower.getPoseTracker().getLocalizer().getForwardMultiplier())));
-        telemetryM.update(telemetry);
+        telemetryM.debug("Multiplier: " + (DISTANCE / ((follower.getPose().getX()-72) / follower.getPoseTracker().getLocalizer().getForwardMultiplier())));
+            telemetryM.update();
 
         drawCurrentAndHistory();
     }
