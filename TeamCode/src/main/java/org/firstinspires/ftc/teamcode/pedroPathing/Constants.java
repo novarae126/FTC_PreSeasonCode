@@ -44,7 +44,7 @@ public class Constants {
             .robotLength(13)
             .robotWidth(16.5)
             .forwardTicksToInches(0.005790379298)
-            .strafeTicksToInches(0.00626780463)
+            .strafeTicksToInches(0.0050411)
             .turnTicksToInches(0.011977639196238938);
 
 
