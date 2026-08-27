@@ -10,7 +10,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 import org.firstinspires.ftc.teamcode.pedroPathing.Constants;
-import org.firstinspires.ftc.teamcode.pedroPathing.Drawing;
 
 @TeleOp
 public class MecanumDrive extends OpMode {
@@ -18,20 +17,20 @@ public class MecanumDrive extends OpMode {
     private double frontLeftCommand, frontRightCommand, backLeftCommand, backRightCommand;
     private DcMotor frontLeft, frontRight, backLeft, backRight;
 
-    private static Follower follower;
-    public static void drawCurrent() {
-        try {
-            Drawing.drawRobot(follower.getPose());
-            Drawing.sendPacket();
-        } catch (Exception e) {
-            throw new RuntimeException("Drawing failed " + e);
-        }
-    }
+//    private static Follower follower;
+//    public static void drawCurrent() {
+//        try {
+//            Drawing.drawRobot(follower.getPose());
+//            Drawing.sendPacket();
+//        } catch (Exception e) {
+//            throw new RuntimeException("Drawing failed " + e);
+//        }
+//    }
 ///67 ohio
-    public static void drawCurrentAndHistory() {
-        Drawing.drawPoseHistory(poseHistory);
-        drawCurrent();
-    }
+//    public static void drawCurrentAndHistory() {
+//        Drawing.drawPoseHistory(poseHistory);
+//        drawCurrent();
+//    }
 //67 ohio
     @Override
     public void init() {
@@ -42,7 +41,7 @@ public class MecanumDrive extends OpMode {
         frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
         backRight.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        follower = Constants.createFollower(hardwareMap);
+//        follower = Constants.createFollower(hardwareMap);
     }
 
     @Override
@@ -72,8 +71,8 @@ public class MecanumDrive extends OpMode {
         backLeft.setPower((backLeftCommand/3));
         backRight.setPower((backRightCommand/3));
 
-        follower.update();
-        drawCurrentAndHistory();
+//        follower.update();
+//        drawCurrentAndHistory();
 
     }
 }
