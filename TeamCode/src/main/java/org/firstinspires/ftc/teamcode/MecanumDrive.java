@@ -27,6 +27,7 @@ public class MecanumDrive extends OpMode {
             throw new RuntimeException("Drawing failed " + e);
         }
     }
+    // this is texting the github for like the 6th or 7th time
 ///67 ohio
     public static void drawCurrentAndHistory() {
         Drawing.drawPoseHistory(poseHistory);
