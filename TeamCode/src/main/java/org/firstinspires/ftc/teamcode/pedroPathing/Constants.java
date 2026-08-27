@@ -43,9 +43,9 @@ public static FollowerConstants followerConstants = new FollowerConstants().mass
             .rightRearEncoderDirection(Encoder.REVERSE)
             .robotLength(13)
             .robotWidth(16.5)
-            .forwardTicksToInches(0.005790379298)
-            .strafeTicksToInches(0.0050411)
-            .turnTicksToInches(0.011977639196238938);
+            .forwardTicksToInches(0.4119783724332225)
+            .strafeTicksToInches(0.2197448425219318)
+            .turnTicksToInches(0.0011594732067133394);
 
 
 
