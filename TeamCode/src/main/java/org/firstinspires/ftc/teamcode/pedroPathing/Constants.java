@@ -32,7 +32,23 @@ public class Constants {
                 .driveEncoderLocalizer(localizerConstants)
                 .build();
     }
-    public static DriveEncoderConstants localizerConstants = new DriveEncoderConstants()
+//    public static DriveEncoderConstants localizerConstants = new DriveEncoderConstants()
+//            .rightFrontMotorName("frontRight")
+//            .rightRearMotorName("backRight")
+//            .leftRearMotorName("backLeft")
+//            .leftFrontMotorName("frontLeft")
+//            .leftFrontEncoderDirection(Encoder.FORWARD)
+//            .leftRearEncoderDirection(Encoder.FORWARD)
+//            .rightFrontEncoderDirection(Encoder.REVERSE)
+//            .rightRearEncoderDirection(Encoder.REVERSE)
+//            .robotLength(13)
+//            .robotWidth(16.5)
+//            .forwardTicksToInches(0.005790379298)
+//            .strafeTicksToInches(0.0050411)
+//            .turnTicksToInches(0.011977639196238938);
+
+    // this is for rubber bandit
+        public static DriveEncoderConstants localizerConstants = new DriveEncoderConstants()
             .rightFrontMotorName("frontRight")
             .rightRearMotorName("backRight")
             .leftRearMotorName("backLeft")
@@ -41,11 +57,11 @@ public class Constants {
             .leftRearEncoderDirection(Encoder.FORWARD)
             .rightFrontEncoderDirection(Encoder.REVERSE)
             .rightRearEncoderDirection(Encoder.REVERSE)
-            .robotLength(13)
-            .robotWidth(16.5)
-            .forwardTicksToInches(0.005790379298)
-            .strafeTicksToInches(0.0050411)
-            .turnTicksToInches(0.011977639196238938);
+            .robotLength(12.5)
+            .robotWidth(10.4)
+            .forwardTicksToInches(0.02445241536408074)
+            .strafeTicksToInches(0.020375046963301998)
+            .turnTicksToInches(0.013269846309546529);
 
 
 
