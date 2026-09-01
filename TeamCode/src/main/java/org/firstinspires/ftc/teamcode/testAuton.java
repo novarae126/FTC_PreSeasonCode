@@ -25,12 +25,6 @@ public class testAuton extends LinearOpMode {
     private final Pose pickup2Pose = new Pose(12, 60, Math.toRadians(180)); // Middle (Second Set) of Artifacts from the Spike Mark.
     private final Pose pickup3Pose = new Pose(12, 36, Math.toRadians(180)); // Lowest (Third Set) of Artifacts from the Spike Mark.
     private final Pose endPose = new Pose (60, 105); // Final Pose of our robot, off the starting line
-    @Override
-    public void runOpMode() throws InterruptedException {
-
-
-
-    }
     public void buildPaths() {
         scorePreload = follower.pathBuilder()
                 .addPath(new BezierLine(startPose, scorePose))
@@ -91,5 +85,11 @@ public class testAuton extends LinearOpMode {
                 /* Leave Start Line Command*/
                 follow(follower, leave, true)
         );
+    }
+    @Override
+    public void runOpMode() throws InterruptedException {
+
+
+
     }
 }
