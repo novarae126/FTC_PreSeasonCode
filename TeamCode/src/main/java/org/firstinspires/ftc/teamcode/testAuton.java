@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-package org.firstinspires.ftc.teamcode.pedroPathing; // make sure this aligns with class location
+//package org.firstinspires.ftc.teamcode.pedroPathing; // make sure this aligns with class location
 import com.pedropathing.follower.Follower;
 import com.pedropathing.geometry.BezierCurve;
 import com.pedropathing.geometry.BezierLine;
@@ -21,7 +21,7 @@ public class testAuton extends LinearOpMode {
    private Follower follower;
     private PathChain scorePreload, grabPickup1, scorePickup1, grabPickup2, scorePickup2, grabPickup3, scorePickup3, leave;
 
-    private final Pose startPose = new Pose(0, 0, Math.toRadians(90)); // Start Pose of our robot. This is against the goal facing AWAY
+    private final Pose startPose = new Pose(72, 0, Math.toRadians(90)); // Start Pose of our robot. This is against the goal facing AWAY
     private final Pose scorePose = new Pose(60, 84, Math.toRadians(135)); // Scoring Pose of our robot.
     private final Pose pickup1Pose = new Pose(17, 84, Math.toRadians(180)); // Highest (First Set) of Artifacts from the Spike Mark.
     private final Pose pickup2Pose = new Pose(12, 60, Math.toRadians(180)); // Middle (Second Set) of Artifacts from the Spike Mark.
