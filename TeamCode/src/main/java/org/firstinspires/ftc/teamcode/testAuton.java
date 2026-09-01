@@ -14,6 +14,8 @@ import static com.pedropathing.ivy.Scheduler.*;
 import static com.pedropathing.ivy.pedro.PedroCommands.*;
 import static com.pedropathing.ivy.groups.Groups.*;
 
+import org.firstinspires.ftc.teamcode.pedroPathing.Constants;
+
 @Autonomous
 public class testAuton extends LinearOpMode {
    private Follower follower;
@@ -87,9 +89,26 @@ public class testAuton extends LinearOpMode {
         );
     }
     @Override
-    public void runOpMode() throws InterruptedException {
+    public void runOpMode() {
+        //These will run when the OpMode is initiated
+        Scheduler.reset();
+        follower = Constants.createFollower(hardwareMap);
+        buildPaths();
+        follower.setStartingPose(startPose);
 
+        waitForStart();
+        //We schedule all our commands when we start the OpMode
+        schedule(autoRoutine());
+        while (opModeIsActive()) {
+            //Update the follower and execute the scheduler every loop
+            follower.update();
+            Scheduler.execute();
 
-
+            // Feedback to Driver Hub for debugging
+            telemetry.addData("x", follower.getPose().getX());
+            telemetry.addData("y", follower.getPose().getY());
+            telemetry.addData("heading", follower.getPose().getHeading());
+            telemetry.update();
+        }
     }
 }
