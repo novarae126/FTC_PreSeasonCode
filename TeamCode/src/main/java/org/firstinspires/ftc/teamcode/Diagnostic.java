@@ -10,7 +10,7 @@ public class Diagnostic extends OpMode {
     private double x_command, y_command, z_command;
     private double frontLeftCommand, frontRightCommand, backLeftCommand, backRightCommand;
     private DcMotor frontLeft, frontRight, backLeft, backRight;
-
+//hi
 
     @Override
     public void init() {
